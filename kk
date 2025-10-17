@@ -1,0 +1,5 @@
+book
+set OPENAI_API_KEY=sk-O6Fin83IG2gh7l8rRiTua2SJ8UsdZtFDJfz7p1BtEMpENjmz
+set WEAVIATE_URL=https://byeocosjq2svn94b6i1gsg.c0.asia-southeast1.gcp.weaviate.cloud
+set WEAVIATE_API_KEY=VFpCR1pOS1FuTDZmZVlZcF94UjNDRjArQ2ZPYXlJUmJZRHJuSXRhaDd6dmZCbFplZ29Nd0xQNmF2Z2tRPV92MjAw
+set RECORD_MANAGER_DB_URL=postgresql://postgres.rrczkeukjmohhtrewzlv:20011203Zym/@aws-1-us-east-2.pooler.supabase.com:6543/postgres
