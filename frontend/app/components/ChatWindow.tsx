@@ -221,17 +221,17 @@ export function ChatWindow(props: { conversationId: string }) {
         alignItems={"center"}
         marginTop={messages.length > 0 ? "" : "64px"}
       >
-        <Heading
-          fontSize={messages.length > 0 ? "2xl" : "3xl"}
-          fontWeight={"medium"}
-          mb={1}
-          color={"white"}
-        >
-          Chat LangChain 🦜🔗
-        </Heading>
+        {/*<Heading*/}
+        {/*  fontSize={messages.length > 0 ? "2xl" : "3xl"}*/}
+        {/*  fontWeight={"medium"}*/}
+        {/*  mb={1}*/}
+        {/*  color={"white"}*/}
+        {/*>*/}
+        {/*  Chat LangChain 🦜🔗*/}
+        {/*</Heading>*/}
         {messages.length > 0 ? (
           <Heading fontSize="md" fontWeight={"normal"} mb={1} color={"white"}>
-            We appreciate feedback!
+            南京财经大学小助手
           </Heading>
         ) : (
           <Heading
@@ -247,32 +247,32 @@ export function ChatWindow(props: { conversationId: string }) {
             </Link>
           </Heading>
         )}
-        <div className="text-white flex flex-wrap items-center mt-4">
-          <div className="flex items-center mb-2">
-            <span className="shrink-0 mr-2">Powered by</span>
-            {llmIsLoading ? (
-              <Spinner className="my-2"></Spinner>
-            ) : (
-                <Select
-                    value={llm}
-                    onChange={(e) => {
-                      insertUrlParam("llm", e.target.value);
-                      setLlm(e.target.value);
-                    }}
-                    width={"240px"}
-                >
-                  {/*<option value="openai_gpt_3_5_turbo">GPT-3.5-Turbo</option>*/}
-                  <option value="ollama_chat">qwen2.5vl:7b</option>
-                  {/*<option value="anthropic_claude_3_haiku">Claude 3 Haiku</option>*/}
-                  {/*<option value="google_gemini_pro">Google Gemini Pro</option>*/}
-                  {/*<option value="fireworks_mixtral">*/}
-                  {/*  Mixtral (via Fireworks.ai)*/}
-                  {/*</option>*/}
-                  {/*<option value="cohere_command">Cohere</option>*/}
-                </Select>
-            )}
-          </div>
-        </div>
+        {/*<div className="text-white flex flex-wrap items-center mt-4">*/}
+        {/*  <div className="flex items-center mb-2">*/}
+        {/*    <span className="shrink-0 mr-2">Powered by</span>*/}
+        {/*    {llmIsLoading ? (*/}
+        {/*      <Spinner className="my-2"></Spinner>*/}
+        {/*    ) : (*/}
+        {/*        <Select*/}
+        {/*            value={llm}*/}
+        {/*            onChange={(e) => {*/}
+        {/*              insertUrlParam("llm", e.target.value);*/}
+        {/*              setLlm(e.target.value);*/}
+        {/*            }}*/}
+        {/*            width={"240px"}*/}
+        {/*        >*/}
+        {/*          /!*<option value="openai_gpt_3_5_turbo">GPT-3.5-Turbo</option>*!/*/}
+        {/*          <option value="ollama_chat">qwen2.5vl:7b</option>*/}
+        {/*          /!*<option value="anthropic_claude_3_haiku">Claude 3 Haiku</option>*!/*/}
+        {/*          /!*<option value="google_gemini_pro">Google Gemini Pro</option>*!/*/}
+        {/*          /!*<option value="fireworks_mixtral">*!/*/}
+        {/*          /!*  Mixtral (via Fireworks.ai)*!/*/}
+        {/*          /!*</option>*!/*/}
+        {/*          /!*<option value="cohere_command">Cohere</option>*!/*/}
+        {/*        </Select>*/}
+        {/*    )}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </Flex>
       <div
         className="flex flex-col-reverse w-full mb-2 overflow-auto"
@@ -299,7 +299,7 @@ export function ChatWindow(props: { conversationId: string }) {
           value={input}
           maxRows={5}
           marginRight={"56px"}
-          placeholder="What does RunnablePassthrough.assign() do?"
+          placeholder="如何对经济金融数据进行分析？"
           textColor={"white"}
           borderColor={"rgb(58, 58, 61)"}
           onChange={(e) => setInput(e.target.value)}

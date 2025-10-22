@@ -258,40 +258,40 @@ export function ChatMessageBubble(props: {
     <VStack align="start" spacing={5} pb={5}>
       {!isUser && filteredSources.length > 0 && (
         <>
-          <Flex direction={"column"} width={"100%"}>
-            <VStack spacing={"5px"} align={"start"} width={"100%"}>
-              <Heading
-                fontSize="lg"
-                fontWeight={"medium"}
-                mb={1}
-                color={"blue.300"}
-                paddingBottom={"10px"}
-              >
-                Sources
-              </Heading>
-              <HStack spacing={"10px"} maxWidth={"100%"} overflow={"auto"}>
-                {filteredSources.map((source, index) => (
-                  <Box key={index} alignSelf={"stretch"} width={40}>
-                    <SourceBubble
-                      source={source}
-                      highlighted={highlighedSourceLinkStates[index]}
-                      onMouseEnter={() =>
-                        setHighlightedSourceLinkStates(
-                          filteredSources.map((_, i) => i === index),
-                        )
-                      }
-                      onMouseLeave={() =>
-                        setHighlightedSourceLinkStates(
-                          filteredSources.map(() => false),
-                        )
-                      }
-                      runId={runId}
-                    />
-                  </Box>
-                ))}
-              </HStack>
-            </VStack>
-          </Flex>
+          {/*<Flex direction={"column"} width={"100%"}>*/}
+          {/*  <VStack spacing={"5px"} align={"start"} width={"100%"}>*/}
+          {/*    <Heading*/}
+          {/*      fontSize="lg"*/}
+          {/*      fontWeight={"medium"}*/}
+          {/*      mb={1}*/}
+          {/*      color={"blue.300"}*/}
+          {/*      paddingBottom={"10px"}*/}
+          {/*    >*/}
+          {/*      Sources*/}
+          {/*    </Heading>*/}
+          {/*    <HStack spacing={"10px"} maxWidth={"100%"} overflow={"auto"}>*/}
+          {/*      {filteredSources.map((source, index) => (*/}
+          {/*        <Box key={index} alignSelf={"stretch"} width={40}>*/}
+          {/*          <SourceBubble*/}
+          {/*            source={source}*/}
+          {/*            highlighted={highlighedSourceLinkStates[index]}*/}
+          {/*            onMouseEnter={() =>*/}
+          {/*              setHighlightedSourceLinkStates(*/}
+          {/*                filteredSources.map((_, i) => i === index),*/}
+          {/*              )*/}
+          {/*            }*/}
+          {/*            onMouseLeave={() =>*/}
+          {/*              setHighlightedSourceLinkStates(*/}
+          {/*                filteredSources.map(() => false),*/}
+          {/*              )*/}
+          {/*            }*/}
+          {/*            runId={runId}*/}
+          {/*          />*/}
+          {/*        </Box>*/}
+          {/*      ))}*/}
+          {/*    </HStack>*/}
+          {/*  </VStack>*/}
+          {/*</Flex>*/}
 
           <Heading size="lg" fontWeight="medium" color="blue.300">
             Answer
@@ -348,20 +348,20 @@ export function ChatMessageBubble(props: {
               👎
             </Button>
             <Spacer />
-            <Button
-              size="sm"
-              variant="outline"
-              colorScheme={runId === null ? "blue" : "gray"}
-              onClick={(e) => {
-                e.preventDefault();
-                viewTrace();
-              }}
-              isLoading={traceIsLoading}
-              loadingText="🔄"
-              color="white"
-            >
-              🦜🛠️ View trace
-            </Button>
+            {/*<Button*/}
+            {/*  size="sm"*/}
+            {/*  variant="outline"*/}
+            {/*  colorScheme={runId === null ? "blue" : "gray"}*/}
+            {/*  onClick={(e) => {*/}
+            {/*    e.preventDefault();*/}
+            {/*    viewTrace();*/}
+            {/*  }}*/}
+            {/*  isLoading={traceIsLoading}*/}
+            {/*  loadingText="🔄"*/}
+            {/*  color="white"*/}
+            {/*>*/}
+            {/*  🦜🛠️ View trace*/}
+            {/*</Button>*/}
           </HStack>
         )}
 
