@@ -294,7 +294,7 @@ export function ChatMessageBubble(props: {
           {/*</Flex>*/}
 
           <Heading size="lg" fontWeight="medium" color="blue.300">
-            Answer
+            AI回答
           </Heading>
         </>
       )}

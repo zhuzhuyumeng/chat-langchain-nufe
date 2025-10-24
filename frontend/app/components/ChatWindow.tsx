@@ -12,7 +12,9 @@ import { marked } from "marked";
 import { Renderer } from "marked";
 import hljs from "highlight.js";
 import "highlight.js/styles/gradient-dark.css";
+import { Image } from '@chakra-ui/react';
 
+import { Box } from "@chakra-ui/react";
 import "react-toastify/dist/ReactToastify.css";
 import {
   Heading,
@@ -219,7 +221,7 @@ export function ChatWindow(props: { conversationId: string }) {
       <Flex
         direction={"column"}
         alignItems={"center"}
-        marginTop={messages.length > 0 ? "" : "64px"}
+        marginTop={messages.length > 0 ? "" : "40px"}
       >
         {/*<Heading*/}
         {/*  fontSize={messages.length > 0 ? "2xl" : "3xl"}*/}
@@ -229,6 +231,21 @@ export function ChatWindow(props: { conversationId: string }) {
         {/*>*/}
         {/*  Chat LangChain 🦜🔗*/}
         {/*</Heading>*/}
+        {/* 替掉你原来的两个 <Box mb={1}> ... </Box> */}
+        <Flex direction="row" gap={3} mb={1} align="center" justify="center">
+          <Image
+            src="/images/提取主体 (1).png"
+            alt="nufe"
+            width={[90, 120, 150]}
+            height="auto"
+          />
+          <Image
+            src="/images/ysys.png"
+            alt="ysys"
+            width={[90, 120, 150]} // 小屏 90px → 中屏 120px → 大屏 150px
+            height="auto"
+          />
+        </Flex>
         {messages.length > 0 ? (
           <Heading fontSize="md" fontWeight={"normal"} mb={1} color={"white"}>
             南京财经大学小助手
@@ -242,7 +259,7 @@ export function ChatWindow(props: { conversationId: string }) {
             textAlign={"center"}
           >
             询问我关于任何关于南京财经大学{" "}
-            <Link href="https://www.nufe.edu.cn/" color={"blue.200"}>
+            <Link href="https://www.nufe.edu.cn/" color={"red.200"}>
               南京财经大学官网
             </Link>
           </Heading>
